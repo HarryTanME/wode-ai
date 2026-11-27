@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wode.ai｜我的 AI｜为个人 AI 而生的域名</title>
+  <meta name="description" content="wode.ai 把「我的 AI」变成品牌、产品名与域名。这个长期持有的 .ai 域名现开放私下收购。">
+  <meta property="og:title" content="wode.ai｜我的 AI｜为个人 AI 而生的域名">
+  <meta property="og:description" content="wode.ai 把「我的 AI」变成品牌、产品名与域名。这个长期持有的 .ai 域名现开放私下收购。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="theme-color" content="#F7F5EF">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #F7F5EF;
+      --paper-deep: #EFECE3;
+      --ink: #14251C;
+      --forest: #1D4634;
+      --forest-deep: #0E2B20;
+      --sage-light: #EAF0EB;
+      --copper: #A65333;
+      --copper-soft: #E9D8CE;
+      --muted: #56635B;
+      --line: rgba(20, 37, 28, 0.18);
+      --line-strong: rgba(20, 37, 28, 0.38);
+      --white: #FFFFFF;
+      --shell: 1180px;
+      --reading: 760px;
+      --header-height: 72px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a, button, summary { font: inherit; }
+    a { color: inherit; }
+    button { color: inherit; }
+    [hidden] { display: none !important; }
+    .shell { width: min(calc(100% - 48px), var(--shell)); margin-inline: auto; }
+    .reading-column { max-width: var(--reading); }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      height: var(--header-height);
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 245, 239, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; gap: 1rem; }
+    .header-left, .header-right, .language-switch { display: flex; align-items: center; }
+    .header-left { min-width: 0; gap: 1rem; }
+    .header-right { gap: 1rem; }
+    .header-mark {
+      flex: none;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+    }
+
+    .header-status {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      flex: none;
+      border-radius: 50%;
+      background: var(--copper);
+      box-shadow: 0 0 0 4px var(--copper-soft);
+    }
+
+    .language-switch { gap: 0.15rem; }
+    .language-button {
+      min-height: 44px;
+      padding: 0.45rem 0.55rem;
+      border: 0;
+      border-radius: 2px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .language-button[aria-current="page"] { color: var(--ink); font-weight: 750; }
+    .language-separator { color: var(--line-strong); user-select: none; }
+
+    .header-cta, .button-primary, .button-secondary, .mail-action {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      font-weight: 750;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .header-cta {
+      min-height: 42px;
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--forest);
+      background: var(--forest);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+    .button-primary, .mail-action { padding: 0.85rem 1.35rem; border: 1px solid var(--forest); background: var(--forest); color: var(--white); }
+    .button-secondary { padding: 0.85rem 1.35rem; border: 1px solid var(--line-strong); background: transparent; color: var(--ink); }
+    .header-cta:hover, .button-primary:hover, .mail-action[href]:hover { border-color: var(--ink); background: var(--ink); }
+    .button-secondary:hover { border-color: var(--forest); background: var(--sage-light); }
+
+    .hero { padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(5rem, 9vw, 8rem); }
+    .hero-grid {
+      display: grid;
+      align-items: end;
+      gap: clamp(3rem, 7vw, 6rem);
+      grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
+    }
+
+    .hero-kicker, .section-kicker, .specimen-label {
+      margin: 0;
+      color: var(--forest);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .domain {
+      width: max-content;
+      max-width: 100%;
+      margin: 1.4rem 0 2.2rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: clamp(5rem, 9.8vw, 8.6rem);
+      font-weight: 650;
+      line-height: 0.9;
+      letter-spacing: -0.085em;
+      white-space: nowrap;
+    }
+
+    h1, .display-serif { font-family: "Songti SC", STSong, SimSun, Georgia, serif; }
+    html[lang="en"] h1, html[lang="en"] .display-serif { font-family: Georgia, "Times New Roman", serif; }
+    h1 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(3.1rem, 5.8vw, 5.4rem);
+      font-weight: 550;
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-lead { max-width: 690px; margin: 0; color: var(--muted); font-size: clamp(1.15rem, 1.65vw, 1.34rem); line-height: 1.75; }
+    .hero-actions, .section-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+
+    .meaning-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.6rem, 3vw, 2.4rem);
+      border: 1px solid var(--line-strong);
+      background: var(--paper-deep);
+    }
+    .meaning-panel::after {
+      position: absolute;
+      right: -3rem;
+      bottom: -5.5rem;
+      width: 12rem;
+      height: 12rem;
+      border: 1px solid rgba(166, 83, 51, 0.28);
+      border-radius: 50%;
+      content: "";
+    }
+    .meaning-title { max-width: 18ch; margin: 0 0 2rem; font-size: clamp(1.35rem, 2vw, 1.65rem); line-height: 1.35; letter-spacing: -0.025em; }
+    .name-equation { display: grid; align-items: stretch; grid-template-columns: 1fr auto 0.75fr; }
+    .name-part { position: relative; z-index: 1; padding: 1.2rem 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+    .name-part:last-child { padding-left: 1rem; }
+    .name-token { display: block; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: clamp(2rem, 4.3vw, 3.6rem); font-weight: 650; line-height: 1; letter-spacing: -0.06em; }
+    .name-meaning { display: block; margin-top: 0.65rem; color: var(--muted); font-size: 0.88rem; font-weight: 650; }
+    .equation-dot { display: flex; width: 1.7rem; align-items: center; justify-content: center; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); color: var(--copper); font-size: 2.2rem; font-weight: 800; }
+    .meaning-result { position: relative; z-index: 1; margin: 1.5rem 0 0; color: var(--ink); font-size: 1rem; font-weight: 700; }
+
+    .benefit-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-deep); }
+    .benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .benefit-item { min-height: 132px; padding: 1.7rem 1.5rem; border-left: 1px solid var(--line); }
+    .benefit-item:first-child { border-left: 0; }
+    .benefit-item strong { display: block; margin-bottom: 0.45rem; font-size: 1rem; }
+    .benefit-item span { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
+
+    .market-section { padding: clamp(4.5rem, 7.5vw, 7rem) 0; background: var(--forest-deep); color: var(--white); }
+    .market-heading-row, .section-heading-row { display: grid; align-items: end; gap: 2rem; grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.65fr); }
+    .market-section .section-kicker { color: #AFC8B7; }
+    .section-title { max-width: 20ch; margin: 1rem 0 0; font-size: clamp(2rem, 3.9vw, 3.5rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.045em; }
+    .section-intro { max-width: 590px; margin: 0; color: var(--muted); font-size: clamp(1.03rem, 1.5vw, 1.17rem); }
+    .market-section .section-intro { color: rgba(255, 255, 255, 0.7); }
+    .signal-grid { display: grid; gap: 1px; margin-top: 3rem; background: rgba(255, 255, 255, 0.18); grid-template-columns: repeat(3, 1fr); }
+    .signal-card { min-height: 260px; padding: 2rem; background: var(--forest-deep); }
+    .signal-company { margin: 0 0 2.8rem; color: #AFC8B7; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .signal-text { max-width: 19ch; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 2.5vw, 2.15rem); line-height: 1.3; letter-spacing: -0.025em; }
+    .signal-source { display: inline-block; margin-top: 2rem; color: rgba(255, 255, 255, 0.68); font-size: 0.85rem; text-underline-offset: 0.25em; }
+    .signal-note { max-width: 720px; margin: 1.4rem 0 0; color: rgba(255, 255, 255, 0.55); font-size: 0.82rem; }
+
+    .proof-section, .fit-section, .faq-section { padding: clamp(4.5rem, 7.5vw, 7rem) 0; }
+    .proof-grid { display: grid; gap: 1px; margin-top: 3rem; background: var(--line); border: 1px solid var(--line); grid-template-columns: repeat(2, 1fr); }
+    .proof-card { min-height: 285px; padding: clamp(1.7rem, 4vw, 2.8rem); background: var(--paper); }
+    .proof-phrase { margin: 0 0 1.5rem; color: var(--copper); font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-weight: 700; }
+    .proof-card h3 { max-width: 18ch; margin: 0 0 1rem; font-size: clamp(1.5rem, 2.7vw, 2.15rem); line-height: 1.25; letter-spacing: -0.035em; }
+    .proof-card p { max-width: 510px; margin: 0; color: var(--muted); }
+    .business-impact { display: flex; align-items: flex-start; gap: 0.7rem; margin-top: 1.8rem !important; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--ink) !important; font-size: 0.9rem; font-weight: 700; }
+    .impact-mark { width: 8px; height: 8px; flex: none; margin-top: 0.5rem; background: var(--copper); }
+
+    .specimen-section { padding: clamp(4.5rem, 7.5vw, 7rem) 0; background: var(--paper-deep); }
+    .specimen-grid { display: grid; gap: 1.2rem; margin-top: 3rem; grid-template-columns: 0.8fr 1.2fr; }
+    .specimen-stack { display: grid; gap: 1.2rem; }
+    .specimen { position: relative; overflow: hidden; min-height: 250px; padding: 1.6rem; border: 1px solid var(--line); background: var(--paper); }
+    .specimen-large { display: flex; min-height: 520px; flex-direction: column; justify-content: space-between; padding: clamp(1.8rem, 4vw, 3rem); background: var(--forest); color: var(--white); }
+    .specimen-large .specimen-label { color: #BDD0C2; }
+    .app-lockup { display: flex; align-items: center; gap: 1rem; }
+    .app-icon { display: grid; width: 72px; height: 72px; place-items: center; border: 1px solid rgba(255, 255, 255, 0.38); background: rgba(255, 255, 255, 0.08); font-family: Georgia, "Times New Roman", serif; font-size: 2.3rem; font-weight: 700; }
+    .app-name { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: 750; letter-spacing: -0.04em; }
+    .specimen-statement { max-width: 620px; margin: 3.5rem 0 1rem; font-size: clamp(2.2rem, 4.4vw, 4rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.045em; }
+    .specimen-caption { max-width: 530px; margin: 0; color: rgba(255, 255, 255, 0.66); }
+    .browser-bar { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.4rem; padding: 0.7rem 0.85rem; border: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+    .browser-dots { display: flex; gap: 0.3rem; }
+    .browser-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line-strong); }
+    .browser-address { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .browser-page { display: grid; min-height: 145px; place-items: center start; padding: 1.4rem; border: 1px solid var(--line); border-top: 0; background: var(--sage-light); }
+    .browser-page strong { display: block; font-size: 2rem; letter-spacing: -0.04em; }
+    .browser-page span { color: var(--muted); }
+    .request-specimen { display: flex; min-height: 270px; flex-direction: column; justify-content: space-between; }
+    .request-line { max-width: 18ch; margin: 2rem 0 1rem; font-size: clamp(1.8rem, 3.8vw, 3.1rem); font-weight: 500; line-height: 1.3; letter-spacing: -0.035em; }
+    .request-note { max-width: 480px; margin: 0; color: var(--muted); font-size: 0.94rem; }
+    .illustration-note { margin: 1.1rem 0 0; color: var(--muted); font-size: 0.8rem; }
+
+    .fit-grid { display: grid; gap: 1px; margin-top: 3rem; border: 1px solid var(--line); background: var(--line); grid-template-columns: repeat(5, 1fr); }
+    .fit-card { min-height: 240px; padding: 1.5rem; background: var(--paper); }
+    .fit-card h3 { margin: 0 0 1.1rem; font-size: 1.05rem; line-height: 1.35; }
+    .fit-card p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.65; }
+    .fit-prompt { display: block; margin-top: 1.4rem; color: var(--copper); font-family: Georgia, "Times New Roman", serif; font-size: 0.9rem; font-weight: 700; }
+
+    .comparison-section { padding: clamp(4.5rem, 7.5vw, 7rem) 0; background: var(--sage-light); }
+    .comparison-matrix { margin-top: 3rem; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); }
+    .matrix-row { display: grid; grid-template-columns: 1.05fr repeat(3, 1fr); }
+    .matrix-cell { min-height: 112px; padding: 1.25rem; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.34); }
+    .matrix-header .matrix-cell { min-height: auto; background: var(--forest-deep); color: var(--white); font-size: 0.9rem; font-weight: 800; }
+    .matrix-cell:first-child { font-weight: 750; }
+    .matrix-row:not(.matrix-header) .matrix-cell:nth-child(2) { background: var(--white); color: var(--forest-deep); font-weight: 750; }
+    .matrix-mobile-label { display: none; margin-bottom: 0.4rem; color: var(--muted); font-size: 0.73rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .matrix-note { max-width: 720px; margin: 1rem 0 0; color: var(--muted); font-size: 0.82rem; }
+
+    .story-section { padding: clamp(5rem, 9vw, 8rem) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .story-inner { max-width: 850px; margin-inline: auto; }
+    .story-quote { max-width: 17ch; margin: 0 0 2.25rem; font-size: clamp(2.4rem, 4.7vw, 4.2rem); font-weight: 500; line-height: 1.2; letter-spacing: -0.045em; }
+    .story-copy { max-width: 690px; margin: 0; color: var(--muted); font-family: "Songti SC", STSong, SimSun, Georgia, serif; font-size: clamp(1.2rem, 2vw, 1.48rem); line-height: 1.95; }
+    html[lang="en"] .story-copy { font-family: Georgia, "Times New Roman", serif; line-height: 1.8; }
+    .story-thesis { max-width: 690px; margin: 2.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: 1rem; font-weight: 750; }
+
+    .scarcity-section { padding: clamp(4rem, 6.5vw, 5.8rem) 0; background: var(--copper); color: var(--white); }
+    .scarcity-grid { display: grid; align-items: center; gap: 3rem; grid-template-columns: minmax(0, 1fr) auto; }
+    .scarcity-title { max-width: 20ch; margin: 0 0 1.2rem; font-size: clamp(2rem, 3.9vw, 3.5rem); line-height: 1.1; letter-spacing: -0.045em; }
+    .scarcity-copy { max-width: 680px; margin: 0; color: rgba(255, 255, 255, 0.78); font-size: 1.05rem; }
+    .scarcity-section .button-secondary { min-width: 170px; border-color: rgba(255, 255, 255, 0.7); color: var(--white); }
+    .scarcity-section .button-secondary:hover { border-color: var(--white); background: var(--white); color: var(--copper); }
+
+    .faq-list { margin-top: 3rem; border-top: 1px solid var(--line-strong); }
+    .faq-item { border-bottom: 1px solid var(--line-strong); }
+    .faq-item summary { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; font-size: 1.08rem; font-weight: 750; cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { flex: none; color: var(--copper); content: "+"; font-size: 1.6rem; font-weight: 400; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-answer { max-width: 760px; margin: 0; padding: 0 0 1.5rem; color: var(--muted); }
+
+    .acquisition-section { scroll-margin-top: calc(var(--header-height) + 1rem); padding: clamp(4.5rem, 7.5vw, 7rem) 0; background: var(--forest-deep); color: var(--white); }
+    .acquisition-grid { display: grid; gap: 4rem; grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.75fr); }
+    .acquisition-section .section-kicker { color: #AFC8B7; }
+    .acquisition-title { max-width: 18ch; margin: 1rem 0 1.5rem; font-size: clamp(2.2rem, 4.25vw, 3.8rem); line-height: 1.1; letter-spacing: -0.045em; }
+    .acquisition-copy { max-width: 650px; margin: 0 0 1.2rem; color: rgba(255, 255, 255, 0.7); font-size: 1.05rem; }
+    .contact-panel { align-self: start; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.055); }
+    .contact-panel h3 { margin: 0 0 0.75rem; font-size: 1.35rem; }
+    .contact-panel > p:first-of-type { margin: 0 0 1.7rem; color: rgba(255, 255, 255, 0.65); font-size: 0.94rem; }
+    .mail-action { width: 100%; border-color: var(--white); background: var(--white); color: var(--forest-deep); }
+    .mail-action[href]:hover { border-color: var(--copper-soft); background: var(--copper-soft); color: var(--forest-deep); }
+    .mail-action[aria-disabled="true"] { border-color: rgba(255, 255, 255, 0.28); background: transparent; color: rgba(255, 255, 255, 0.52); cursor: not-allowed; }
+    .email-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.45rem 0.75rem; margin: 1.3rem 0 0; }
+    .email-label { color: rgba(255, 255, 255, 0.58); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+    .email-address { font-size: 1rem; font-weight: 700; user-select: all; }
+    .mail-note { margin: 1rem 0 0; color: rgba(255, 255, 255, 0.58); font-size: 0.84rem; line-height: 1.6; }
+
+    .site-footer { padding: 1.5rem 0 2.3rem; border-top: 1px solid var(--line); background: var(--paper); color: var(--muted); font-size: 0.82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 1rem; }
+    :focus-visible { outline: 3px solid #D67B52; outline-offset: 4px; }
+    section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .market-heading-row, .section-heading-row, .acquisition-grid { grid-template-columns: 1fr; }
+      .meaning-panel { max-width: 720px; }
+      .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+      .benefit-item:nth-child(3) { border-top: 1px solid var(--line); border-left: 0; }
+      .benefit-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .signal-grid, .fit-grid { grid-template-columns: repeat(2, 1fr); }
+      .signal-card:last-child, .fit-card:last-child { grid-column: 1 / -1; }
+      .specimen-grid { grid-template-columns: 1fr; }
+      .specimen-large { min-height: 470px; }
+      .scarcity-grid { align-items: start; grid-template-columns: 1fr; }
+      .contact-panel { max-width: 620px; }
+    }
+
+    @media (max-width: 720px) {
+      :root { --header-height: 64px; }
+      .shell { width: min(calc(100% - 40px), var(--shell)); }
+      .header-status, .header-cta { display: none; }
+      .header-right { margin-left: auto; }
+      .hero { padding-top: 4.2rem; }
+      .domain { margin-block: 1.2rem 2rem; font-size: clamp(3.55rem, 17vw, 4.25rem); }
+      h1 { font-size: clamp(2.9rem, 13vw, 3.8rem); }
+      .hero-lead { font-size: 1.08rem; }
+      .hero-actions, .section-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions a, .section-actions a { width: 100%; }
+      .name-token { font-size: 2.2rem; }
+      .benefit-grid, .signal-grid, .proof-grid, .fit-grid { grid-template-columns: 1fr; }
+      .benefit-item { min-height: auto; border-top: 1px solid var(--line); border-left: 0; }
+      .benefit-item:first-child { border-top: 0; }
+      .signal-card, .fit-card, .signal-card:last-child, .fit-card:last-child { min-height: auto; grid-column: auto; }
+      .signal-company { margin-bottom: 1.5rem; }
+      .proof-card { min-height: auto; }
+      .specimen-large { min-height: 460px; }
+      .specimen-statement { margin-top: 3.5rem; }
+      .comparison-matrix { border: 0; }
+      .matrix-row { display: block; margin-bottom: 1rem; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); }
+      .matrix-row.matrix-header { display: none; }
+      .matrix-cell { min-height: auto; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+      .matrix-row:not(.matrix-header) .matrix-cell:first-child { background: var(--forest-deep); color: var(--white); }
+      .matrix-mobile-label { display: block; }
+      .story-quote { font-size: clamp(2.35rem, 10vw, 3rem); }
+      .scarcity-section .button-secondary { width: 100%; }
+      .footer-inner { display: block; }
+      .footer-inner span:last-child { display: block; margin-top: 0.35rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <div class="header-left">
+        <a class="header-mark" href="#top" aria-label="wode.ai">wode.ai</a>
+        <span class="header-status"><span class="status-dot" aria-hidden="true"></span><span data-copy="availability">域名开放收购</span></span>
+      </div>
+      <div class="header-right">
+        <nav class="language-switch" id="language-switch" aria-label="语言切换">
+          <button class="language-button" type="button" data-language="zh-CN" aria-current="page">中文</button>
+          <span class="language-separator" aria-hidden="true">/</span>
+          <button class="language-button" type="button" data-language="en">English</button>
+        </nav>
+        <a class="header-cta" href="#acquisition" data-copy="cta" data-aria="inquiry">保密询价</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid shell">
+        <div>
+          <p class="hero-kicker" data-copy="heroKicker">为个人 AI、助理与智能体而生的品牌域名</p>
+          <p class="domain">wode.ai</p>
+          <h1 id="hero-title" data-copy="headline">我的 AI</h1>
+          <p class="hero-lead" data-copy="heroLead">每一家个人 AI 公司都在回答同一个问题：用户会怎样称呼它？wode.ai 把答案直接写进品牌——这是我的 AI。</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#proof" data-copy="seeProof">为什么它成立</a>
+            <a class="button-secondary" href="#acquisition" data-copy="cta" data-aria="inquiry">保密询价</a>
+          </div>
+        </div>
+
+        <aside class="meaning-panel" aria-labelledby="meaning-title">
+          <h2 class="meaning-title" id="meaning-title" data-copy="meaningTitle">名字、含义与网址，在第一眼完成对齐。</h2>
+          <div class="name-equation" aria-label="wode dot ai">
+            <div class="name-part"><span class="name-token">wode</span><span class="name-meaning" data-copy="wodeMeaning">我的 · my</span></div>
+            <span class="equation-dot" aria-hidden="true">.</span>
+            <div class="name-part"><span class="name-token">ai</span><span class="name-meaning" data-copy="aiMeaning">品类 · category</span></div>
+          </div>
+          <p class="meaning-result" data-copy="meaningResult">读出来是品牌，写下来就是产品地址。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="benefit-strip" aria-label="wode.ai naming advantages">
+      <div class="benefit-grid shell">
+        <div class="benefit-item"><strong data-copy="benefitOneTitle">不需要教用户念</strong><span data-copy="benefitOneBody">名字来自一句自然会说出口的话。</span></div>
+        <div class="benefit-item"><strong data-copy="benefitTwoTitle">一眼看见 AI</strong><span data-copy="benefitTwoBody">品类直接存在于品牌和域名里。</span></div>
+        <div class="benefit-item"><strong data-copy="benefitThreeTitle">关系先于功能</strong><span data-copy="benefitThreeBody">「我的」把产品放进用户的生活。</span></div>
+        <div class="benefit-item"><strong data-copy="benefitFourTitle">品牌等于网址</strong><span data-copy="benefitFourBody">传播、搜索和访问使用同一个名字。</span></div>
+      </div>
+    </section>
+
+    <section class="market-section" id="market" aria-labelledby="market-title">
+      <div class="shell">
+        <div class="market-heading-row">
+          <div><p class="section-kicker" data-copy="marketKicker">品类正在变得更个人</p><h2 class="section-title" id="market-title" data-copy="marketTitle">领先的 AI 公司，正在争夺「你的 AI」这层关系。</h2></div>
+          <p class="section-intro" data-copy="marketIntro">当产品开始记住、理解并替用户行动，名字也需要从工具感走向归属感。wode.ai 已经站在这条叙事线上。</p>
+        </div>
+        <div class="signal-grid">
+          <article class="signal-card"><p class="signal-company">Google Gemini</p><p class="signal-text" data-copy="googleSignal">打造「理解你」的个人 AI 助手。</p><a class="signal-source" href="https://blog.google/products-and-platforms/products/gemini/gemini-personalization/" target="_blank" rel="noopener noreferrer" data-copy="sourceLink">官方来源</a></article>
+          <article class="signal-card"><p class="signal-company">Microsoft Copilot</p><p class="signal-text" data-copy="microsoftSignal">从「一个 AI 伙伴」走向「你的 AI 伙伴」。</p><a class="signal-source" href="https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/" target="_blank" rel="noopener noreferrer" data-copy="sourceLink">官方来源</a></article>
+          <article class="signal-card"><p class="signal-company">Apple Intelligence</p><p class="signal-text" data-copy="appleSignal">以个人情境为基础的个人智能系统。</p><a class="signal-source" href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/" target="_blank" rel="noopener noreferrer" data-copy="sourceLink">官方来源</a></article>
+        </div>
+        <p class="signal-note" data-copy="signalNote">以上为公开的品类信号，仅用于说明个人 AI 的市场语言；不代表这些公司与 wode.ai 有任何关联或背书。</p>
+      </div>
+    </section>
+
+    <section class="proof-section" id="proof" aria-labelledby="proof-title">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker" data-copy="proofKicker">命名的商业逻辑</p><h2 class="section-title" id="proof-title" data-copy="proofTitle">品类已经有了那个词。这个域名拥有整句话。</h2></div>
+          <p class="section-intro" data-copy="proofIntro">好的 AI 名字不只需要被记住，还要帮助产品被理解、被介绍、被放进日常使用。wode.ai 把这些动作串成同一条路径。</p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card"><p class="proof-phrase">“这是我的 AI。”</p><h3 data-copy="proofOneTitle">用户语言直接成为品牌语言</h3><p data-copy="proofOneBody">不是先发明一个词，再花预算解释它。用户介绍产品时，本来就会说「我的 AI」。</p><p class="business-impact"><span class="impact-mark" aria-hidden="true"></span><span data-copy="proofOneImpact">商业意义：让品牌说明与产品介绍使用同一句话。</span></p></article>
+          <article class="proof-card"><p class="proof-phrase">wode.ai</p><h3 data-copy="proofTwoTitle">品牌、品类和网址没有断层</h3><p data-copy="proofTwoBody">wode 给出关系，.ai 给出品类。域名本身已经承担了品牌解释的一部分。</p><p class="business-impact"><span class="impact-mark" aria-hidden="true"></span><span data-copy="proofTwoImpact">商业意义：建立一套可重复的发布、传播与访问语言。</span></p></article>
+          <article class="proof-card"><p class="proof-phrase">my → mine</p><h3 data-copy="proofThreeTitle">个人化从功能升级为归属关系</h3><p data-copy="proofThreeBody">记忆、偏好、日程和行动都在回答同一件事：这个 AI 是否真正属于并理解眼前的人。</p><p class="business-impact"><span class="impact-mark" aria-hidden="true"></span><span data-copy="proofThreeImpact">商业意义：为信任、记忆与长期使用提供统一叙事。</span></p></article>
+          <article class="proof-card"><p class="proof-phrase">assistant · memory · agent</p><h3 data-copy="proofFourTitle">不把公司锁死在一个功能里</h3><p data-copy="proofFourBody">它可以从助手开始，延伸到记忆、智能体、陪伴或个人生产力，而名字依然成立。</p><p class="business-impact"><span class="impact-mark" aria-hidden="true"></span><span data-copy="proofFourImpact">商业意义：产品路线可以演进，核心品牌无需跟着重命名。</span></p></article>
+        </div>
+        <div class="section-actions"><a class="button-primary" href="#acquisition" data-copy="cta" data-aria="inquiry">保密询价</a></div>
+      </div>
+    </section>
+
+    <section class="specimen-section" id="specimens" aria-labelledby="specimen-title">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker" data-copy="specimenKicker">把名字放进产品</p><h2 class="section-title" id="specimen-title" data-copy="specimenTitle">它不只适合出现在地址栏，也适合出现在用户生活里。</h2></div>
+          <p class="section-intro" data-copy="specimenIntro">一个有力量的名字，应该能自然进入启动页、请求语句和品牌发布。以下是 wode.ai 的品牌应用示意。</p>
+        </div>
+        <div class="specimen-grid">
+          <article class="specimen specimen-large">
+            <div><p class="specimen-label" data-copy="appSpecimenLabel">应用与品牌</p><div class="app-lockup"><span class="app-icon" aria-hidden="true">w</span><span class="app-name">wode.ai</span></div></div>
+            <div><p class="specimen-statement display-serif" data-copy="appSpecimenTitle">你的 AI，开始真正了解你。</p><p class="specimen-caption" data-copy="appSpecimenBody">一句启动语，就能把品牌名、个人化承诺和产品方向放在同一个画面里。</p></div>
+          </article>
+          <div class="specimen-stack">
+            <article class="specimen">
+              <p class="specimen-label" data-copy="browserSpecimenLabel">网址与发布</p>
+              <div class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-address">https://wode.ai</span></div>
+              <div class="browser-page"><div><strong data-copy="browserSpecimenTitle">认识我的 AI。</strong><span data-copy="browserSpecimenBody">名称、承诺与访问地址一次完成。</span></div></div>
+            </article>
+            <article class="specimen request-specimen"><p class="specimen-label" data-copy="requestSpecimenLabel">请求与关系</p><p class="request-line display-serif" data-copy="vignetteTitle">「替我约个时间吧。」</p><p class="request-note" data-copy="requestSpecimenBody">名字为这种关系留出位置：用户提出请求，AI 理解真正重要的事。</p></article>
+          </div>
+        </div>
+        <p class="illustration-note" data-copy="illustrationNote">以上为命名与界面文案示意，不代表现有软件、功能或业务。</p>
+      </div>
+    </section>
+
+    <section class="fit-section" id="fit" aria-labelledby="fit-title">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker" data-copy="fitKicker">一个名字，多条产品路线</p><h2 class="section-title" id="fit-title" data-copy="fitTitle">无论从哪里开始，最终都回到「我的」。</h2></div>
+          <p class="section-intro" data-copy="fitIntro">wode.ai 不定义技术架构，也不限制功能边界。它定义的是产品与用户之间的关系。</p>
+        </div>
+        <div class="fit-grid">
+          <article class="fit-card"><h3 data-copy="fitOneTitle">个人 AI 助手</h3><p data-copy="fitOneBody">替我安排、整理、提醒与完成日常任务。</p><span class="fit-prompt" data-copy="fitOnePrompt">“Ask my AI.”</span></article>
+          <article class="fit-card"><h3 data-copy="fitTwoTitle">个人记忆</h3><p data-copy="fitTwoBody">记住我的偏好、项目、关系与未完的对话。</p><span class="fit-prompt" data-copy="fitTwoPrompt">“My context.”</span></article>
+          <article class="fit-card"><h3 data-copy="fitThreeTitle">个人智能体</h3><p data-copy="fitThreeBody">代表我跨应用行动，但始终围绕我的目标。</p><span class="fit-prompt" data-copy="fitThreePrompt">“Act for me.”</span></article>
+          <article class="fit-card"><h3 data-copy="fitFourTitle">AI 陪伴</h3><p data-copy="fitFourBody">理解我的节奏，并在长期互动中形成熟悉感。</p><span class="fit-prompt" data-copy="fitFourPrompt">“Knows me.”</span></article>
+          <article class="fit-card"><h3 data-copy="fitFiveTitle">个人生产力</h3><p data-copy="fitFiveBody">把注意力还给工作、生活和真正重要的人。</p><span class="fit-prompt" data-copy="fitFivePrompt">“My time.”</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section" id="comparison" aria-labelledby="comparison-title">
+      <div class="shell">
+        <div class="section-heading-row">
+          <div><p class="section-kicker" data-copy="comparisonKicker">用同一套标准看名字</p><h2 class="section-title" id="comparison-title" data-copy="comparisonTitle">一个域名什么时候开始像一项品牌资产？</h2></div>
+          <p class="section-intro" data-copy="comparisonIntro">不是因为它看起来像 AI，而是因为它能同时承担理解、记忆、传播和扩展。</p>
+        </div>
+        <div class="comparison-matrix" role="table" aria-label="Naming criteria comparison">
+          <div class="matrix-row matrix-header" role="row"><div class="matrix-cell" role="columnheader" data-copy="matrixCriteria">命名标准</div><div class="matrix-cell" role="columnheader">wode.ai</div><div class="matrix-cell" role="columnheader" data-copy="matrixGeneric">描述型 AI 域名</div><div class="matrix-cell" role="columnheader" data-copy="matrixInvented">自造品牌词</div></div>
+          <div class="matrix-row" role="row"><div class="matrix-cell" role="rowheader" data-copy="matrixRowOne">品类清晰度</div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label">wode.ai</span><span data-copy="matrixOneWode">AI 直接存在于名字与网址</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixGeneric">描述型 AI 域名</span><span data-copy="matrixOneGeneric">通常清晰，但容易停留在功能描述</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixInvented">自造品牌词</span><span data-copy="matrixOneInvented">取决于后续解释与认知投入</span></div></div>
+          <div class="matrix-row" role="row"><div class="matrix-cell" role="rowheader" data-copy="matrixRowTwo">个人关系</div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label">wode.ai</span><span data-copy="matrixTwoWode">「我的」把归属写进品牌</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixGeneric">描述型 AI 域名</span><span data-copy="matrixTwoGeneric">多半强调工具或任务</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixInvented">自造品牌词</span><span data-copy="matrixTwoInvented">需要通过体验逐步建立</span></div></div>
+          <div class="matrix-row" role="row"><div class="matrix-cell" role="rowheader" data-copy="matrixRowThree">进入自然语言</div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label">wode.ai</span><span data-copy="matrixThreeWode">“my AI” 本身就是自然表达</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixGeneric">描述型 AI 域名</span><span data-copy="matrixThreeGeneric">可能更像网址或产品类别</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixInvented">自造品牌词</span><span data-copy="matrixThreeInvented">发音与含义往往需要学习</span></div></div>
+          <div class="matrix-row" role="row"><div class="matrix-cell" role="rowheader" data-copy="matrixRowFour">产品扩展空间</div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label">wode.ai</span><span data-copy="matrixFourWode">从助手到智能体仍然成立</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixGeneric">描述型 AI 域名</span><span data-copy="matrixFourGeneric">可能受最初功能描述限制</span></div><div class="matrix-cell" role="cell"><span class="matrix-mobile-label" data-copy="matrixInvented">自造品牌词</span><span data-copy="matrixFourInvented">通常灵活，但早期较抽象</span></div></div>
+        </div>
+        <p class="matrix-note" data-copy="matrixNote">此表为命名逻辑比较，不是经过市场实验的表现数据，也不构成商业结果保证。</p>
+      </div>
+    </section>
+
+    <section class="story-section" aria-labelledby="story-title">
+      <div class="story-inner shell"><h2 class="story-quote display-serif" id="story-title" data-copy="vignetteTitle">「替我约个时间吧。」</h2><p class="story-copy" data-copy="vignetteBody">想象有位个人助手，记得你每周三下午要去接孩子。你请它拟几个见面的时间，那半天，它替你留着。</p><p class="story-thesis" data-copy="storyThesis">这就是「我的 AI」真正有价值的时刻：不是让技术显得更大，而是让它更懂谁的时间最重要。</p></div>
+    </section>
+
+    <section class="scarcity-section" aria-labelledby="scarcity-title">
+      <div class="scarcity-grid shell"><div><h2 class="scarcity-title" id="scarcity-title" data-copy="scarcityTitle">一个准确的域名。一个最终的持有人。</h2><p class="scarcity-copy" data-copy="scarcityBody">许多公司可以同时评估这个名字，但完整的 wode.ai 只能由一方持有。一旦完成转让，它就会离开这个市场。</p></div><a class="button-secondary" href="#acquisition" data-copy="cta" data-aria="inquiry">保密询价</a></div>
+    </section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="shell reading-column">
+        <p class="section-kicker" data-copy="faqKicker">收购说明</p><h2 class="section-title" id="faq-title" data-copy="faqTitle">先把交易边界说清楚。</h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary data-copy="faqOneQuestion">此次出售包含什么？</summary><p class="faq-answer" data-copy="faqOneAnswer">此次出售仅涉及 wode.ai 域名本身。软件、公司、商标及现有业务均不在交易范围内。</p></details>
+          <details class="faq-item"><summary data-copy="faqTwoQuestion">为什么页面没有公开价格？</summary><p class="faq-answer" data-copy="faqTwoAnswer">持有人邀请有明确产品意向的潜在买家私下洽谈。页面不展示公开报价、估值或竞价信息。</p></details>
+          <details class="faq-item"><summary data-copy="faqThreeQuestion">公开品类信号是否代表背书？</summary><p class="faq-answer" data-copy="faqThreeAnswer">不是。页面引用的公司与材料仅用于说明个人 AI 的公开市场语言；它们与 wode.ai 的出售没有关联。</p></details>
+          <details class="faq-item"><summary data-copy="faqFourQuestion">如何开始洽谈？</summary><p class="faq-answer" data-copy="faqFourAnswer">确认对外收件地址后，页面会打开一封主题已填写、正文留空的邮件草稿，由买家自行决定提供哪些信息。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="acquisition-section" id="acquisition" aria-labelledby="acquisition-title">
+      <div class="acquisition-grid shell">
+        <div><p class="section-kicker" data-copy="acquisitionKicker">私下收购</p><h2 class="acquisition-title" id="acquisition-title" data-copy="acquisitionTitle">如果这就是你想让用户说出口的名字，我们可以谈。</h2><p class="acquisition-copy" data-copy="ownership">现持有人多年前注册了 wode.ai，并持续持有至今。此次出售仅涉及域名本身。</p><p class="acquisition-copy" data-copy="invitation">如果这个名字适合你的个人 AI、助手或智能体产品，欢迎直接与持有人私下洽谈。</p></div>
+        <div class="contact-panel"><h3 data-copy="contactTitle">发起保密询价</h3><p data-copy="contactIntro">邮件正文保持为空，你可以自行决定披露公司、产品或报价信息。</p><a class="mail-action" id="mail-action" data-copy="cta" data-aria="mailAction" aria-disabled="true" tabindex="0">保密询价</a><p class="email-row" id="email-row" hidden><span class="email-label" data-copy="emailLabel">联系邮箱</span><span class="email-address" id="email-address"></span></p><p class="mail-note" id="mail-note" role="status" tabindex="-1">联系邮箱尚未接入；确认地址后，这里将开放邮件询价。</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-inner shell"><span>wode.ai</span><span data-copy="footerNote">域名开放收购 · 私下洽谈</span></div></footer>
+
+  <script>
+    // 上线前只需在这里填入持有人确认的真实收件地址。
+    window.WODE_SITE_CONFIG = { contactEmail: "" };
+
+    const COPY = {
+      "zh-CN": {
+        title: "wode.ai｜我的 AI｜为个人 AI 而生的域名",
+        description: "wode.ai 把「我的 AI」变成品牌、产品名与域名。这个长期持有的 .ai 域名现开放私下收购。",
+        availability: "域名开放收购",
+        heroKicker: "为个人 AI、助理与智能体而生的品牌域名",
+        headline: "我的 AI",
+        heroLead: "每一家个人 AI 公司都在回答同一个问题：用户会怎样称呼它？wode.ai 把答案直接写进品牌——这是我的 AI。",
+        seeProof: "为什么它成立",
+        cta: "保密询价",
+        meaningTitle: "名字、含义与网址，在第一眼完成对齐。",
+        wodeMeaning: "我的 · my",
+        aiMeaning: "品类 · category",
+        meaningResult: "读出来是品牌，写下来就是产品地址。",
+        benefitOneTitle: "不需要教用户念",
+        benefitOneBody: "名字来自一句自然会说出口的话。",
+        benefitTwoTitle: "一眼看见 AI",
+        benefitTwoBody: "品类直接存在于品牌和域名里。",
+        benefitThreeTitle: "关系先于功能",
+        benefitThreeBody: "「我的」把产品放进用户的生活。",
+        benefitFourTitle: "品牌等于网址",
+        benefitFourBody: "传播、搜索和访问使用同一个名字。",
+        marketKicker: "品类正在变得更个人",
+        marketTitle: "领先的 AI 公司，正在争夺「你的 AI」这层关系。",
+        marketIntro: "当产品开始记住、理解并替用户行动，名字也需要从工具感走向归属感。wode.ai 已经站在这条叙事线上。",
+        googleSignal: "打造「理解你」的个人 AI 助手。",
+        microsoftSignal: "从「一个 AI 伙伴」走向「你的 AI 伙伴」。",
+        appleSignal: "以个人情境为基础的个人智能系统。",
+        sourceLink: "官方来源",
+        signalNote: "以上为公开的品类信号，仅用于说明个人 AI 的市场语言；不代表这些公司与 wode.ai 有任何关联或背书。",
+        proofKicker: "命名的商业逻辑",
+        proofTitle: "品类已经有了那个词。这个域名拥有整句话。",
+        proofIntro: "好的 AI 名字不只需要被记住，还要帮助产品被理解、被介绍、被放进日常使用。wode.ai 把这些动作串成同一条路径。",
+        proofOneTitle: "用户语言直接成为品牌语言",
+        proofOneBody: "不是先发明一个词，再花预算解释它。用户介绍产品时，本来就会说「我的 AI」。",
+        proofOneImpact: "商业意义：让品牌说明与产品介绍使用同一句话。",
+        proofTwoTitle: "品牌、品类和网址没有断层",
+        proofTwoBody: "wode 给出关系，.ai 给出品类。域名本身已经承担了品牌解释的一部分。",
+        proofTwoImpact: "商业意义：建立一套可重复的发布、传播与访问语言。",
+        proofThreeTitle: "个人化从功能升级为归属关系",
+        proofThreeBody: "记忆、偏好、日程和行动都在回答同一件事：这个 AI 是否真正属于并理解眼前的人。",
+        proofThreeImpact: "商业意义：为信任、记忆与长期使用提供统一叙事。",
+        proofFourTitle: "不把公司锁死在一个功能里",
+        proofFourBody: "它可以从助手开始，延伸到记忆、智能体、陪伴或个人生产力，而名字依然成立。",
+        proofFourImpact: "商业意义：产品路线可以演进，核心品牌无需跟着重命名。",
+        specimenKicker: "把名字放进产品",
+        specimenTitle: "它不只适合出现在地址栏，也适合出现在用户生活里。",
+        specimenIntro: "一个有力量的名字，应该能自然进入启动页、请求语句和品牌发布。以下是 wode.ai 的品牌应用示意。",
+        appSpecimenLabel: "应用与品牌",
+        appSpecimenTitle: "你的 AI，开始真正了解你。",
+        appSpecimenBody: "一句启动语，就能把品牌名、个人化承诺和产品方向放在同一个画面里。",
+        browserSpecimenLabel: "网址与发布",
+        browserSpecimenTitle: "认识我的 AI。",
+        browserSpecimenBody: "名称、承诺与访问地址一次完成。",
+        requestSpecimenLabel: "请求与关系",
+        requestSpecimenBody: "名字为这种关系留出位置：用户提出请求，AI 理解真正重要的事。",
+        illustrationNote: "以上为命名与界面文案示意，不代表现有软件、功能或业务。",
+        fitKicker: "一个名字，多条产品路线",
+        fitTitle: "无论从哪里开始，最终都回到「我的」。",
+        fitIntro: "wode.ai 不定义技术架构，也不限制功能边界。它定义的是产品与用户之间的关系。",
+        fitOneTitle: "个人 AI 助手",
+        fitOneBody: "替我安排、整理、提醒与完成日常任务。",
+        fitOnePrompt: "“Ask my AI.”",
+        fitTwoTitle: "个人记忆",
+        fitTwoBody: "记住我的偏好、项目、关系与未完的对话。",
+        fitTwoPrompt: "“My context.”",
+        fitThreeTitle: "个人智能体",
+        fitThreeBody: "代表我跨应用行动，但始终围绕我的目标。",
+        fitThreePrompt: "“Act for me.”",
+        fitFourTitle: "AI 陪伴",
+        fitFourBody: "理解我的节奏，并在长期互动中形成熟悉感。",
+        fitFourPrompt: "“Knows me.”",
+        fitFiveTitle: "个人生产力",
+        fitFiveBody: "把注意力还给工作、生活和真正重要的人。",
+        fitFivePrompt: "“My time.”",
+        comparisonKicker: "用同一套标准看名字",
+        comparisonTitle: "一个域名什么时候开始像一项品牌资产？",
+        comparisonIntro: "不是因为它看起来像 AI，而是因为它能同时承担理解、记忆、传播和扩展。",
+        matrixCriteria: "命名标准",
+        matrixGeneric: "描述型 AI 域名",
+        matrixInvented: "自造品牌词",
+        matrixRowOne: "品类清晰度",
+        matrixOneWode: "AI 直接存在于名字与网址",
+        matrixOneGeneric: "通常清晰，但容易停留在功能描述",
+        matrixOneInvented: "取决于后续解释与认知投入",
+        matrixRowTwo: "个人关系",
+        matrixTwoWode: "「我的」把归属写进品牌",
+        matrixTwoGeneric: "多半强调工具或任务",
+        matrixTwoInvented: "需要通过体验逐步建立",
+        matrixRowThree: "进入自然语言",
+        matrixThreeWode: "“my AI” 本身就是自然表达",
+        matrixThreeGeneric: "可能更像网址或产品类别",
+        matrixThreeInvented: "发音与含义往往需要学习",
+        matrixRowFour: "产品扩展空间",
+        matrixFourWode: "从助手到智能体仍然成立",
+        matrixFourGeneric: "可能受最初功能描述限制",
+        matrixFourInvented: "通常灵活，但早期较抽象",
+        matrixNote: "此表为命名逻辑比较，不是经过市场实验的表现数据，也不构成商业结果保证。",
+        vignetteTitle: "「替我约个时间吧。」",
+        vignetteBody: "想象有位个人助手，记得你每周三下午要去接孩子。你请它拟几个见面的时间，那半天，它替你留着。",
+        storyThesis: "这就是「我的 AI」真正有价值的时刻：不是让技术显得更大，而是让它更懂谁的时间最重要。",
+        scarcityTitle: "一个准确的域名。一个最终的持有人。",
+        scarcityBody: "许多公司可以同时评估这个名字，但完整的 wode.ai 只能由一方持有。一旦完成转让，它就会离开这个市场。",
+        faqKicker: "收购说明",
+        faqTitle: "先把交易边界说清楚。",
+        faqOneQuestion: "此次出售包含什么？",
+        faqOneAnswer: "此次出售仅涉及 wode.ai 域名本身。软件、公司、商标及现有业务均不在交易范围内。",
+        faqTwoQuestion: "为什么页面没有公开价格？",
+        faqTwoAnswer: "持有人邀请有明确产品意向的潜在买家私下洽谈。页面不展示公开报价、估值或竞价信息。",
+        faqThreeQuestion: "公开品类信号是否代表背书？",
+        faqThreeAnswer: "不是。页面引用的公司与材料仅用于说明个人 AI 的公开市场语言；它们与 wode.ai 的出售没有关联。",
+        faqFourQuestion: "如何开始洽谈？",
+        faqFourAnswer: "确认对外收件地址后，页面会打开一封主题已填写、正文留空的邮件草稿，由买家自行决定提供哪些信息。",
+        acquisitionKicker: "私下收购",
+        acquisitionTitle: "如果这就是你想让用户说出口的名字，我们可以谈。",
+        ownership: "现持有人多年前注册了 wode.ai，并持续持有至今。此次出售仅涉及域名本身。",
+        invitation: "如果这个名字适合你的个人 AI、助手或智能体产品，欢迎直接与持有人私下洽谈。",
+        contactTitle: "发起保密询价",
+        contactIntro: "邮件正文保持为空，你可以自行决定披露公司、产品或报价信息。",
+        emailLabel: "联系邮箱",
+        emailReady: "将打开你的邮件应用。也可复制邮箱地址自行联系。",
+        emailPending: "联系邮箱尚未接入；确认地址后，这里将开放邮件询价。",
+        emailSubject: "wode.ai 域名收购询价",
+        footerNote: "域名开放收购 · 私下洽谈",
+        languageNav: "语言切换",
+        inquiryAria: "前往 wode.ai 私下收购区",
+        mailAction: "打开邮件应用，发起 wode.ai 保密询价",
+        mailPendingAction: "保密询价，联系邮箱尚未接入"
+      },
+      en: {
+        title: "wode.ai | My AI | A domain built for personal AI",
+        description: "wode.ai turns “My AI” into a brand, product name and domain. This long-held .ai domain is available for private acquisition.",
+        availability: "Domain available for acquisition",
+        heroKicker: "A brand domain for personal AI, assistants and agents",
+        headline: "My AI",
+        heroLead: "Every personal AI company must answer the same question: what will users call it? wode.ai puts the answer directly into the brand—this is my AI.",
+        seeProof: "See why it works",
+        cta: "Inquire privately",
+        meaningTitle: "The name, meaning and address align at first sight.",
+        wodeMeaning: "我的 · my",
+        aiMeaning: "category · AI",
+        meaningResult: "Spoken, it is the brand. Typed, it is the product address.",
+        benefitOneTitle: "No invented pronunciation",
+        benefitOneBody: "The name begins with something people naturally say.",
+        benefitTwoTitle: "AI at first sight",
+        benefitTwoBody: "The category lives directly in the brand and domain.",
+        benefitThreeTitle: "Relationship before features",
+        benefitThreeBody: "“My” places the product inside the user’s life.",
+        benefitFourTitle: "The brand is the URL",
+        benefitFourBody: "Discovery, sharing and access use one name.",
+        marketKicker: "The category is becoming personal",
+        marketTitle: "Leading AI companies are competing for the relationship behind “your AI.”",
+        marketIntro: "As products remember, understand and act for users, their names must move from tool-like utility toward personal ownership. wode.ai already lives in that narrative.",
+        googleSignal: "Building a personal AI assistant that understands you.",
+        microsoftSignal: "Moving from an AI companion to your AI companion.",
+        appleSignal: "Personal intelligence grounded in personal context.",
+        sourceLink: "Official source",
+        signalNote: "These are public category signals included to describe the language of personal AI. They do not imply any affiliation with or endorsement of wode.ai.",
+        proofKicker: "The business logic of the name",
+        proofTitle: "The category already has the word. This domain owns the sentence.",
+        proofIntro: "A strong AI name must do more than stick in memory. It should help the product be understood, introduced and placed into daily life. wode.ai connects those actions.",
+        proofOneTitle: "User language becomes brand language",
+        proofOneBody: "The company does not need to invent a word and then pay to explain it. People already introduce a personal product as “my AI.”",
+        proofOneImpact: "Business implication: product explanation and brand introduction can use the same sentence.",
+        proofTwoTitle: "No gap between brand, category and URL",
+        proofTwoBody: "wode establishes the relationship; .ai establishes the category. The domain itself carries part of the brand explanation.",
+        proofTwoImpact: "Business implication: one repeatable language system for launch, sharing and access.",
+        proofThreeTitle: "Personalization becomes ownership",
+        proofThreeBody: "Memory, preferences, schedules and actions all answer one question: does this AI truly belong to and understand the person using it?",
+        proofThreeImpact: "Business implication: a unified narrative for trust, memory and long-term use.",
+        proofFourTitle: "The name does not lock the company to one feature",
+        proofFourBody: "It can begin with assistance and expand into memory, agents, companionship or personal productivity while the name still holds.",
+        proofFourImpact: "Business implication: the product roadmap can evolve without renaming the core brand.",
+        specimenKicker: "Put the name inside the product",
+        specimenTitle: "It belongs in the user’s life, not only in the address bar.",
+        specimenIntro: "A powerful name should move naturally into onboarding, requests and launch language. These specimens show how wode.ai can behave as a brand.",
+        appSpecimenLabel: "App and brand",
+        appSpecimenTitle: "Your AI starts to truly understand you.",
+        appSpecimenBody: "One opening line can align the name, the personalization promise and the product direction in a single frame.",
+        browserSpecimenLabel: "URL and launch",
+        browserSpecimenTitle: "Meet My AI.",
+        browserSpecimenBody: "Name, promise and destination arrive together.",
+        requestSpecimenLabel: "Request and relationship",
+        requestSpecimenBody: "The name makes room for this relationship: the user asks, and the AI understands what truly matters.",
+        illustrationNote: "These are illustrative naming and interface-copy specimens. They do not represent existing software, capabilities or a business.",
+        fitKicker: "One name, several product paths",
+        fitTitle: "Wherever the product begins, it returns to “my.”",
+        fitIntro: "wode.ai does not define the technical architecture or constrain the feature set. It defines the relationship between the product and its user.",
+        fitOneTitle: "Personal AI assistant",
+        fitOneBody: "Arrange, organize, remind and complete everyday tasks for me.",
+        fitOnePrompt: "“Ask my AI.”",
+        fitTwoTitle: "Personal memory",
+        fitTwoBody: "Remember my preferences, projects, relationships and unfinished conversations.",
+        fitTwoPrompt: "“My context.”",
+        fitThreeTitle: "Personal agent",
+        fitThreeBody: "Act across apps on my behalf while staying aligned with my goals.",
+        fitThreePrompt: "“Act for me.”",
+        fitFourTitle: "AI companion",
+        fitFourBody: "Understand my rhythm and develop familiarity through long-term interaction.",
+        fitFourPrompt: "“Knows me.”",
+        fitFiveTitle: "Personal productivity",
+        fitFiveBody: "Return attention to work, life and the people who matter most.",
+        fitFivePrompt: "“My time.”",
+        comparisonKicker: "Judge every name by the same criteria",
+        comparisonTitle: "When does a domain begin to behave like a brand asset?",
+        comparisonIntro: "Not simply when it looks like AI, but when it can carry comprehension, memory, distribution and expansion at once.",
+        matrixCriteria: "Naming criterion",
+        matrixGeneric: "Descriptive AI domain",
+        matrixInvented: "Invented brand word",
+        matrixRowOne: "Category clarity",
+        matrixOneWode: "AI lives directly in the name and URL",
+        matrixOneGeneric: "Often clear, but can remain a feature description",
+        matrixOneInvented: "Depends on later explanation and awareness building",
+        matrixRowTwo: "Personal relationship",
+        matrixTwoWode: "“My” places ownership in the brand",
+        matrixTwoGeneric: "Often emphasizes a tool or task",
+        matrixTwoInvented: "Must usually be built through experience",
+        matrixRowThree: "Natural speech",
+        matrixThreeWode: "“my AI” is already a natural phrase",
+        matrixThreeGeneric: "May sound more like a URL or category",
+        matrixThreeInvented: "Pronunciation and meaning often require learning",
+        matrixRowFour: "Room to expand",
+        matrixFourWode: "Still works from assistant to agent",
+        matrixFourGeneric: "May inherit limits from the original function",
+        matrixFourInvented: "Usually flexible, but initially abstract",
+        matrixNote: "This table compares naming logic. It is not measured market-performance data and does not guarantee a commercial outcome.",
+        vignetteTitle: "“Find a time for us to meet.”",
+        vignetteBody: "Imagine a personal assistant that remembers you pick up your child on Wednesday afternoons. When you ask for a few times to meet, it leaves that afternoon free.",
+        storyThesis: "This is where “My AI” becomes valuable: not by making the technology feel bigger, but by understanding whose time matters most.",
+        scarcityTitle: "One exact domain. One eventual owner.",
+        scarcityBody: "Many companies can evaluate the name at the same time. Only one party can hold the complete wode.ai domain. Once transferred, it leaves this market.",
+        faqKicker: "Acquisition details",
+        faqTitle: "Make the transaction boundaries clear first.",
+        faqOneQuestion: "What is included in the sale?",
+        faqOneAnswer: "The sale covers the wode.ai domain name alone. Software, companies, trademarks and existing businesses are outside its scope.",
+        faqTwoQuestion: "Why is there no public price?",
+        faqTwoAnswer: "The holder invites private conversations with prospective buyers who have a clear product interest. The page does not publish offers, valuations or auction information.",
+        faqThreeQuestion: "Do the public category signals imply endorsement?",
+        faqThreeAnswer: "No. The referenced companies and materials describe public market language around personal AI. They have no relationship to the sale of wode.ai.",
+        faqFourQuestion: "How does a conversation begin?",
+        faqFourAnswer: "Once a public contact address is confirmed, the page will open an email draft with the subject filled and the body empty, leaving the buyer in control of what to disclose.",
+        acquisitionKicker: "Private acquisition",
+        acquisitionTitle: "If this is the name you want users to say, we should talk.",
+        ownership: "The current holder registered wode.ai years ago and has held it ever since. The sale covers the domain name alone.",
+        invitation: "If the name fits your personal AI, assistant or agent product, you are welcome to contact the holder for a private conversation.",
+        contactTitle: "Start a private inquiry",
+        contactIntro: "The email body remains empty so you can decide whether to disclose a company, product or offer.",
+        emailLabel: "Email",
+        emailReady: "Opens your email app. You can also select and copy the address to get in touch directly.",
+        emailPending: "The contact email has not been connected yet. Email inquiries will open here once it is confirmed.",
+        emailSubject: "Acquisition inquiry for wode.ai",
+        footerNote: "Domain available for acquisition · Private inquiries",
+        languageNav: "Language switch",
+        inquiryAria: "Go to the private wode.ai acquisition section",
+        mailAction: "Open your email app to inquire privately about wode.ai",
+        mailPendingAction: "Inquire privately, contact email not connected"
+      }
+    };
+
+    const state = { language: new URL(window.location.href).searchParams.get("lang") === "en" ? "en" : "zh-CN" };
+    const mailAction = document.getElementById("mail-action");
+    const mailNote = document.getElementById("mail-note");
+    const emailRow = document.getElementById("email-row");
+    const emailAddress = document.getElementById("email-address");
+
+    function hasValidContactEmail() {
+      const email = window.WODE_SITE_CONFIG.contactEmail.trim();
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function refreshContact() {
+      const copy = COPY[state.language];
+      const email = window.WODE_SITE_CONFIG.contactEmail.trim();
+      if (hasValidContactEmail()) {
+        mailAction.href = `mailto:${email}?subject=${encodeURIComponent(copy.emailSubject)}`;
+        mailAction.removeAttribute("aria-disabled");
+        mailAction.setAttribute("aria-label", copy.mailAction);
+        emailAddress.textContent = email;
+        emailRow.hidden = false;
+        mailNote.textContent = copy.emailReady;
+      } else {
+        mailAction.removeAttribute("href");
+        mailAction.setAttribute("aria-disabled", "true");
+        mailAction.setAttribute("aria-label", copy.mailPendingAction);
+        emailAddress.textContent = "";
+        emailRow.hidden = true;
+        mailNote.textContent = copy.emailPending;
+      }
+    }
+
+    function setLanguage(language, updateUrl = true) {
+      const marker = document.elementFromPoint(Math.min(window.innerWidth / 2, 400), 100);
+      const markerTop = marker ? marker.getBoundingClientRect().top : null;
+      const nextLanguage = language === "en" ? "en" : "zh-CN";
+      state.language = nextLanguage;
+      const copy = COPY[nextLanguage];
+      document.documentElement.lang = nextLanguage;
+      document.title = copy.title;
+      document.querySelector('meta[name="description"]').content = copy.description;
+      document.querySelector('meta[property="og:title"]').content = copy.title;
+      document.querySelector('meta[property="og:description"]').content = copy.description;
+      document.querySelector('meta[property="og:locale"]').content = nextLanguage === "en" ? "en_US" : "zh_CN";
+      document.getElementById("language-switch").setAttribute("aria-label", copy.languageNav);
+      document.querySelectorAll("[data-copy]").forEach((element) => {
+        const value = copy[element.dataset.copy];
+        if (value !== undefined) element.textContent = value;
+      });
+      document.querySelectorAll("[data-language]").forEach((button) => {
+        if (button.dataset.language === nextLanguage) button.setAttribute("aria-current", "page");
+        else button.removeAttribute("aria-current");
+      });
+      document.querySelectorAll("[data-aria='inquiry']").forEach((element) => element.setAttribute("aria-label", copy.inquiryAria));
+      refreshContact();
+      if (marker && markerTop !== null && document.contains(marker)) window.scrollBy(0, marker.getBoundingClientRect().top - markerTop);
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (nextLanguage === "en") url.searchParams.set("lang", "en");
+        else url.searchParams.delete("lang");
+        window.history.replaceState({ language: nextLanguage }, "", url);
+      }
+    }
+
+    document.querySelectorAll("[data-language]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.language)));
+    mailAction.addEventListener("click", (event) => {
+      if (!hasValidContactEmail()) { event.preventDefault(); mailNote.focus({ preventScroll: true }); }
+    });
+    mailAction.addEventListener("keydown", (event) => {
+      if (!hasValidContactEmail() && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); mailNote.focus({ preventScroll: true }); }
+    });
+    window.addEventListener("popstate", () => setLanguage(new URL(window.location.href).searchParams.get("lang") === "en" ? "en" : "zh-CN", false));
+    setLanguage(state.language, false);
+  </script>
+</body>
+</html>
